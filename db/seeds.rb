@@ -4,7 +4,7 @@ Review.destroy_all
 
 puts "🌱 Seeding Restaurants..."
 
-10.times do
+20.times do
 restaurant = Restaurant.create(
     name: Faker::Restaurant.name, 
     cuisine: Faker::Restaurant.type
@@ -14,10 +14,10 @@ end
 
 puts "🌱 Seeding Reviews..."
 
-10.times do
+20.times do
 review = Review.create(
     rating: Faker::Restaurant.review, 
-    user_name: Restaurant.name, 
+    user_name: Faker::Name.name, 
     restaurant_id: Restaurant.all.sample.id
 )
 end
